@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bundle Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="page-wrapper">
+    <div class="inner-container">
+      <div class="top-banner">
+        Buy 3 and Save 30%
+      </div>
+  
+      <div class="main-content">
+        <div class="product-selection">
+          <div class="products">
+            <div class="card" data-id="1">
+              <img src="assets/p1.jpg" alt="Tie-Dye Lounge Set">
+              <h3>Tie-Dye Lounge Set</h3>
+              <p>$150.00</p>
+              <button onclick="toggleProduct(1)">Add to Bundle <span class="plus-icon">+</span></button>
+            </div>
+  
+            <div class="card" data-id="2">
+              <img src="assets/p2.jpg" alt="Sunburst Tracksuit">
+              <h3>Sunburst Tracksuit</h3>
+              <p>$150.00</p>
+              <button onclick="toggleProduct(2)">Add to Bundle <span class="plus-icon">+</span></button>
+            </div>
+  
+            <div class="card" data-id="3">
+              <img src="assets/p3.jpg" alt="Retro Red Streetwear">
+              <h3>Retro Red Streetwear</h3>
+              <p>$150.00</p>
+              <button onclick="toggleProduct(3)">Add to Bundle <span class="plus-icon">+</span></button>
+            </div>
+  
+            <div class="card" data-id="4">
+              <img src="assets/p4.jpg" alt="Urban Sportwear Combo">
+              <h3>Urban Sportwear Combo</h3>
+              <p>$150.00</p>
+              <button onclick="toggleProduct(4)">Add to Bundle <span class="plus-icon">+</span></button>
+            </div>
+  
+            <div class="card" data-id="5">
+              <img src="assets/p5.jpg" alt="Oversized Knit & Coat">
+              <h3>Oversized Knit & Coat</h3>
+              <p>$150.00</p>
+              <button onclick="toggleProduct(5)">Add to Bundle <span class="plus-icon">+</span></button>
+            </div>
+  
+            <div class="card" data-id="6">
+              <img src="assets/p6.jpg" alt="Chic Monochrome Blazer">
+              <h3>Chic Monochrome Blazer</h3>
+              <p>$150.00</p>
+              <button onclick="toggleProduct(6)">Add to Bundle <span class="plus-icon">+</span></button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="bundle-summary-panel">
+          <h2>Create a Bundle</h2>
+          <p class="instruction">Add at least 3 products and Save 30%</p>
+          <div id="bundleItemsContainer" class="bundle-items">
+            <div class="bundle-placeholder"></div>
+            <div class="bundle-placeholder"></div>
+            <div class="bundle-placeholder"></div>
+          </div>
+          <div class="summary">
+            <div class="summary-line">
+              <span>Discount</span>
+              <span id="discountPrice">₹0</span>
+            </div>
+            <div class="summary-line final-total">
+              <span>Subtotal</span>
+              <span id="subtotalPrice">₹0</span>
+            </div>
+            <button id="addToCart" disabled>Add 3 Items to Proceed</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

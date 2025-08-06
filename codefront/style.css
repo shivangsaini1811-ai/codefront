@@ -1,0 +1,434 @@
+body {
+  font-family: sans-serif;
+  background: #f0f2f3;
+  margin: 0;
+  padding: 0;
+}
+
+/* Outer wrapper */
+.page-wrapper {
+  width: 1695px;
+  height: 1194.72px;
+  padding: 80px 127.5px;
+  background: #ffffff;
+  margin: 40px auto;
+  box-sizing: border-box;
+}
+
+/* Inner container */
+.inner-container {
+  width: 1440px;
+  height: 1034.72px;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+
+/* Top banner */
+.top-banner {
+  width: 1440px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  opacity: 1;
+  text-align: center;
+}
+
+/* Main content area */
+.main-content {
+  display: flex;
+  gap: 33px;
+  width: 100%;
+  flex: 1;
+}
+
+/* Product selection grid */
+.product-selection {
+  width: 1040px;
+  height: 957.72px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 454.86px;
+  gap: 48px;
+}
+
+/* Product card */
+.card {
+  width: 100%;
+  height: 454.86px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+}
+
+.card img {
+  width: 100%;
+  height: calc(454.86px - 120px);
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.card button {
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #000;
+  font-size: 14px;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.card button.active {
+  background: #000;
+  color: #fff;
+}
+
+/* Bundle summary panel */
+.bundle-summary-panel {
+  width: 320px;
+  flex: 0 0 320px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------------- New Styles for Bundle Items Panel ---------------- */
+
+/* Bundle items list */
+.bundle-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.bundle-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.bundle-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.bundle-item-info {
+  flex: 1;
+}
+
+.bundle-item-info h4 {
+  font-size: 14px;
+  margin: 0 0 4px;
+}
+
+.bundle-item-info p {
+  font-size: 13px;
+  color: #555;
+  margin: 0;
+}
+
+.bundle-qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bundle-qty-controls button {
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.bundle-remove {
+  border: none;
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #666;
+}
+
+.bundle-remove:hover {
+  color: #000;
+}
+
+/* Summary footer */
+.summary {
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+  margin-top: auto;
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.summary-line.discount {
+  color: #888;
+}
+
+.summary-line.subtotal {
+  font-weight: 600;
+}
+
+.final-total {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#addToCart {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 14px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+#addToCart:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Add '+' and '✓' icons inside buttons */
+.card button::after {
+  content: '+';
+  font-weight: bold;
+}
+
+.card button.active::after {
+  content: '✓';
+  color: #fff;
+}
+
+/* Bundle Panel: Title styles */
+.bundle-summary-panel h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Bold "Create a Bundle" text */
+.bundle-summary-panel h2:first-child {
+  font-weight: 700;
+}
+
+/* Bundle Panel: Info text */
+.bundle-summary-panel p {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Bundle quantity input text */
+.bundle-qty-controls span {
+  font-size: 14px;
+}
+
+/* Quantity buttons size */
+.bundle-qty-controls button {
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* ---------------------- MEDIA QUERIES ---------------------- */
+
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .page-wrapper {
+    width: 100%;
+    padding: 40px 24px;
+  }
+
+  .inner-container {
+    width: 100%;
+  }
+
+  .top-banner {
+    font-size: 28px;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+
+  .product-selection {
+    width: 100%;
+    height: auto;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .bundle-summary-panel {
+    width: 100%;
+    flex: none;
+    margin-top: 40px;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .top-banner {
+    font-size: 24px;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    height: auto;
+  }
+
+  .card img {
+    height: 300px;
+  }
+
+  .summary-line {
+    font-size: 13px;
+  }
+
+  .final-total {
+    font-size: 15px;
+  }
+
+  #addToCart {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+/* ---------------- Bundle Summary: Visual Refinements ---------------- */
+
+/* Bundle summary panel border (thicker) */
+.bundle-summary-panel {
+  border: 2px solid #000;
+}
+
+/* "Create a Bundle" title formatting */
+.bundle-summary-panel h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Description under title */
+.bundle-summary-panel p {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Add underline divider below the title section */
+.bundle-summary-panel::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  margin: 10px 0 20px 0;
+}
+
+/* Discount and Subtotal section */
+.summary {
+  width: 306px;
+  height: 147px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0;
+  opacity: 1;
+  transform: rotate(0deg);
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+  margin-top: auto;
+  box-sizing: border-box;
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.summary-line.discount {
+  color: #888;
+}
+
+.summary-line.subtotal {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.final-total {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Add to Cart button – styled version */
+#addToCart {
+  width: 306px;
+  height: 55px;
+  padding: 16px;
+  background: var(--color-grey-27, #444444);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid var(--color-grey-27, #444444);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 1;
+  transform: rotate(0deg);
+  box-sizing: border-box;
+}
+
+#addToCart:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
